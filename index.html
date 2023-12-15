@@ -4,47 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="code.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <div class="titleText">
-        <h1 class="title">Rock Paper Scissors</h1>
-        <h2 class="subTitle">
-            Click on the buttons to choose what weapon you'll fight 
-            againts the computer!
-        </h2>
-        <h3 class="title3">
-            Best of Five!
-        </h3>
-    </div>
-    <div class="buttons buttons-disable">
-        <button class="Rock" value="rock">Rock</button>
-        <button class="Paper" value="paper">Paper</button>
-        <button class="Scissors" value="scissors">Scissors</button>
-    </div>
-    <div class="score">
-        <div class="score player">
-            <h4>Player Score</h4>
-            <p class="scorePlayer">
-                
-            </p>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main>
+        <div class="titles">
+            <h2 class="subTitle">
+                Best of Five!
+            </h2>
+            <h3 class="title3">
+                Choose your weapon
+            </h3>
         </div>
-        <div class="score computer">
-            <h4>Computer Score</h4>
-            <p class = "scoreComputer">
-                
-            </p>
+        <div class="buttons buttons-disable">
+            <button class="Rock" value="rock">
+                <img class="img" src="images/rock.png" alt="rock">
+            </button>
+            <button class="Paper" value="paper">
+                <img class="img" src="images/paper.png" alt="paper">
+            </button>
+            <button class="Scissors" value="scissors">
+                <img class="img" src="images/scissor.png" alt="scissors">
+            </button>
         </div>
-        <div class="result">
-            <h4 class="titleWinner">The Winner!</h4>
-            <P class="resultWinner">
-                
-            </P>
-    
+        <div id="score">
+            <div class="score player">
+                <div>
+                    <h4>Player Score</h4>
+                    <p class="scorePlayer"></p>
+                </div>
+                <div>
+                    <h4>Computer Score</h4>
+                    <p class = "scoreComputer"></p>
+                </div>
+            </div>
+            <div class="result">
+                <h4 class="titleWinner">The Winner!</h4>
+                <P class="resultWinner"></P>
+            </div>
+        <div class="buttons again">
+            <button class="bAgain" value="again">Play Again!</button>
         </div>
-    <div class="buttons again">
-        <button value="again">Play Again!</button>
+    </main>
+    <div class="footer">
+        <p>Copyright ® Douglas Moura 2023</p>
     </div>
-
 </body>
 </html>

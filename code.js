@@ -6,7 +6,7 @@ buttons.forEach(function (button) {
 
 
 function handleClick(e) {
-    const clickButton = e.target.value;
+    const clickButton = e.currentTarget.value;
     let string = clickButton;
 
     switch (clickButton) {
@@ -48,27 +48,27 @@ function playRound(playerSelection, computerSelection){
     switch(lowerString) {
         case "rock":
             if (computerSelection == "Rock")
-                return "Empate! Rock e Rock nao acontece nada!";
+                return "It's a tie! you and the computer choose Rock!";
             else if (computerSelection == "Paper")
-                return "Voce perdeu! Paper vence de Rock!";
+                return "You loose! you choose Rock and the computer choose Paper";
             else
-                return "Voce venceu! Rock vence de Scissors";
+                return "You win! you choose Rock and the computer choose Scissors";
             break;
         case "paper":
             if (computerSelection == "Rock")
-                return "Voce venceu! Paper vence de Rock!";
+                return "You win! you choose Paper and the computer choose Rock";
             else if (computerSelection == "Paper")
-                return "Empate! Paper e Paper nao acontece nada!";
+                return "It's a tie! you and the computer choose Paper!";
             else
-                return "Voce perdeu! Scissors vence de Paper!";
+                return "You loose! you choose Paper and the computer choose Scissors";
             break;
         case "scissors":
             if (computerSelection == "Rock")
-                return "Voce perdeu! Rock vence de Scissors";
+                return "You loose! you choose Scissors and the computer choose Rock";
             else if (computerSelection == "Paper")
-                return "Voce venceu! Scissors vence de Paper!";
+                return "You win! you choose Scissors and the computer choose Paper";
             else
-                return "Empate! Scissors e Scissors nao acontece nada!";
+                return "It's a tie! you and the computer choose Scissors!";
             break;
     }
 };
@@ -116,10 +116,10 @@ function game(playerSelection){
     if (playerSelection !== 'again'){
         computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
-        if (result.includes("venceu")) {
+        if (result.includes("win")) {
             player += 1;
         } 
-        else if (result.includes("perdeu")) {
+        else if (result.includes("loose")) {
             computer += 1;
         }
 
@@ -131,13 +131,13 @@ function game(playerSelection){
         if (i == 5){
             disableButtons();
             if (player > computer){
-                msgScoreResult.textContent = "You won the best of five! If you want play again, click on Play Again!";
+                msgScoreResult.textContent = "You won the best of five! If you want a revenge, click on Play Again!";
             }
             else if (computer > player){
-                msgScoreResult.textContent = "You loose the best of five! If you want a revange, click on Play Again!";
+                msgScoreResult.textContent = "You lost the best of five! If you want a revenge, click on Play Again!";
             }
             else {
-                msgScoreResult.textContent ="Wow it's a tie! If you want play agian just click on the button bellow";
+                msgScoreResult.textContent ="Wow! It's a tie! If you want play again, click on Play Again!";
             }
         }
     }
