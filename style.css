@@ -38,7 +38,7 @@ main {
     height: 500px;
 }
 
-.subTitle {
+.sub-title {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
@@ -104,7 +104,7 @@ main {
     font-weight: bold;
 }
 
-.bAgain {
+.button-again{
     background-color: #525B56;
     color: white;
     border-radius: 5px;
